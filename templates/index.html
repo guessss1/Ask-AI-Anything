@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI поисковик</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ASK AI ANYTHING</h1>
+            <div class="nav-icons">
+                <div class="icon">
+                    <img src="{{ url_for('static', filename='icons/search.svg') }}" alt="Search">
+                    <span>SEARCH THE INTERNET</span>
+                </div>
+                <div class="icon">
+                    <img src="{{ url_for('static', filename='icons/ai.svg') }}" alt="AI">
+                    <span>AI-POWERED ANSWERS</span>
+                </div>
+                <div class="icon">
+                    <img src="{{ url_for('static', filename='icons/history.svg') }}" alt="History">
+                    <span>CHAT HISTORY</span>
+                </div>
+                <div class="icon">
+                    <img src="{{ url_for('static', filename='icons/assistant.svg') }}" alt="Assistant">
+                    <span>SMART ASSISTANT</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be inserted here -->
+                </div>
+
+                <div class="input-container">
+                    <textarea id="messageInput" placeholder="Message..." rows="1"></textarea>
+                    <button id="sendButton">
+                        <img src="{{ url_for('static', filename='icons/send.svg') }}" alt="Send">
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-results">
+                <h2>SEARCH RESULTS</h2>
+                <div id="searchResultsContainer">
+                    <!-- Search results will be inserted here -->
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
